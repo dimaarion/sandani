@@ -1,0 +1,20 @@
+h2, h3{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h2 a{
+    text-decoration: none;
+    color: rgb(35, 156, 35);
+}
+
+.imagearts img{
+     border: solid 8px #909190;
+    border-radius: 400px;
+    height: 400px;
+    width: 400px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.imagearts img:hover{
+    border: solid 8px green;
+    
+}

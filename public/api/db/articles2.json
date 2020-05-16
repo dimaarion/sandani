@@ -1,0 +1,192 @@
+[
+    {
+        "id": 1,
+        "names": "home",
+        "home": [
+            {
+                "id": 1,
+                "names": "Главная",
+                "title": "Главная",
+                "alias": "/",
+                "keyWord": "Главная",
+                "description": "Главная",
+                "img": "",
+                "content": "Главная"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "names": "window",
+        "window": [
+            {
+                "id": 1,
+                "names": "Окна",
+                "title": "Окна",
+                "alias": "window",
+                "keyWord": "Окна",
+                "description": "Окна",
+                "img": "",
+                "content": "Окна"
+            },
+            {
+                "id": 2,
+                "names": "Система GreenEvolution",
+                "title": "GreenEvolution",
+                "alias": "GreenEvolution",
+                "keyWord": "GreenEvolution",
+                "description": "GreenEvolution",
+                "img": "",
+                "content": "Окна GreenEvolution",
+                "GreenEvolution": [
+                    {
+                        "id": 1,
+                        "names": "greenEvolution 76",
+                        "alias": "greenEvolution_76.html",
+                        "img": "",
+                        "content": "Окна greenEvolution 76",
+                        "greenEvolution_76":{
+                            "id": 1,
+                            "names": "greenEvolution 76",
+                            "title": "greenEvolution 76",
+                            "keyWord": "greenEvolution 76",
+                            "description": "greenEvolution 76",
+                            "img": "",
+                            "content": "Окна greenEvolution 76"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "names": "Система bluEvolution",
+                "title": "Система bluEvolution",
+                "alias": "bluEvolution",
+                "keyWord": "bluEvolution",
+                "description": "bluEvolution",
+                "img": "",
+                "content": "Окна bluEvolution",
+                "bluEvolution": [
+                    {
+                        "id": 1,
+                        "names": "bluEvolution 82",
+                        "alias": "bluEvolution_82.html",
+                        "img": "",
+                        "content": "Окна bluEvolution 82",
+                        "bluEvolution_82": {
+                            "id": 1,
+                            "names": "bluEvolution 82",
+                            "title": "bluEvolution 82",
+                            "keyWord": "bluEvolution 82",
+                            "description": "bluEvolution 82",
+                            "img": "",
+                            "content": "Окна bluEvolution 82"
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "names": "bluEvolution 73",
+                        "alias": "bluEvolution_73.html",
+                        "img": "",
+                        "content": "Окна bluEvolution 73",
+                        "bluEvolution_73": {
+                            "id": 1,
+                            "names": "bluEvolution 73",
+                            "title": "bluEvolution 73",
+                            "keyWord": "bluEvolution 73",
+                            "description": "bluEvolution 73",
+                            "img": "",
+                            "content": "Окна bluEvolution 73"
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "names": "bluEvolution 92",
+                        "alias": "bluEvolution_92.html",
+                        "img": "",
+                        "content": "Окна bluEvolution 92",
+                        "bluEvolution_92": {
+                            "id": 1,
+                            "names": "bluEvolution 92",
+                            "title": "bluEvolution 92",
+                            "keyWord": "bluEvolution 92",
+                            "description": "bluEvolution 92",
+                            "img": "",
+                            "content": "Окна bluEvolution 92"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "names": "Другие окна",
+                "title": "Другие окна",
+                "alias": "drugie_okna",
+                "keyWord": "Другие окна",
+                "description": "Другие окна",
+                "img": "",
+                "content": "Окна Другие окна",
+                "drugie_okna": [
+                    {
+                        "id": 1,
+                        "names": "Salamander Streamline",
+                        "alias": "Salamander_Streamline.html",
+                        "img": "",
+                        "content": "Salamander Streamline",
+                        "Salamander_Streamline": {
+                            "id": 1,
+                            "names": "Salamander Streamline",
+                            "title": "Salamander Streamline",
+                            "keyWord": "Salamander Streamline",
+                            "description": "Salamander Streamline",
+                            "img": "",
+                            "content": "Salamander Streamline"
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "names": "Salamander 3D",
+                        "alias": "Salamander_3D.html",
+                        "img": "",
+                        "content": "Salamander 3D",
+                        "Salamander_3D": {
+                            "id": 1,
+                            "names": "Salamander 3D",
+                            "title": "Salamander 3D",
+                            "keyWord": "Salamander 3D",
+                            "description": "Salamander 3D",
+                            "img": "",
+                            "content": "Salamander 3D"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "names": "doors",
+        "doors": [
+            {
+                "id": 1,
+                "names": "Двери",
+                "title": "Двери",
+                "alias": "doors.html",
+                "keyWord": "Двери",
+                "description": "Двери",
+                "img": "",
+                "content": "Двери"
+            },
+            {
+                "id": 2,
+                "names": "Система bluEvolution",
+                "title": "Система bluEvolution",
+                "alias": "bluEvolution_doors.html",
+                "keyWord": "bluEvolution",
+                "description": "bluEvolution",
+                "img": "",
+                "content": "Двери bluEvolution"
+            }
+        ]
+    }
+]

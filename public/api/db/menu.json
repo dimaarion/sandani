@@ -1,0 +1,135 @@
+[
+	{
+		"id": 1,
+		"names": "Главная",
+		"alias": "/",
+		"cild": []
+	},
+	{
+		"id": 2,
+		"names": "Окна",
+		"alias": "window.html",
+		"cild": [
+			{
+				"id": 1,
+				"names": "Система GreenEvolution",
+				"alias": "GreenEvolution.html",
+				"cild": [
+					{
+						"id": 1,
+						"names": "greenEvolution 76",
+						"alias": "greenEvolution_76.html",
+						"cild": []
+					}
+				]
+			},
+			{
+				"id": 2,
+				"names": "Система bluEvolution",
+				"alias": "bluEvolution.html",
+				"cild": [
+					{
+						"id": 1,
+						"names": "bluEvolution 82",
+						"alias": "bluEvolution_82.html",
+						"cild": []
+					},
+					{
+						"id": 2,
+						"names": "bluEvolution 73",
+						"alias": "bluEvolution_73.html",
+						"cild": []
+					},
+					{
+						"id": 3,
+						"names": "bluEvolution 92",
+						"alias": "bluEvolution_92.html",
+						"cild": []
+					}
+				]
+			},
+			{
+				"id": 3,
+				"names": "Другие окна",
+				"alias": "drugie_okna.html",
+				"cild": [
+					{
+						"id": 1,
+						"names": "Salamander Streamline",
+						"alias": "Salamander_Streamline.html",
+						"cild": []
+					},
+					{
+						"id": 2,
+						"names": "Salamander 3D",
+						"alias": "Salamander_3D.html",
+						"cild": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 3,
+		"names": "Двери",
+		"alias": "doors.html",
+		"cild": [
+			{
+				"id": 2,
+				"names": "Система bluEvolution",
+				"alias": "bluEvolution_doors.html",
+				"cild": [
+					{
+						"id": 1,
+						"names": "bluEvolution 82",
+						"alias": "bluEvolution_82.html",
+						"cild": []
+					},
+					{
+						"id": 2,
+						"names": "bluEvolution 73",
+						"alias": "bluEvolution_73.html",
+						"cild": []
+					},
+					{
+						"id": 3,
+						"names": "bluEvolution 92",
+						"alias": "bluEvolution_92.html",
+						"cild": []
+					}
+				]
+			},
+			{
+				"id": 3,
+				"names": "Другие двери",
+				"alias": "drugie_ dveri.html",
+				"cild": [
+					{
+						"id": 1,
+						"names": "Salamander Streamline",
+						"alias": "Salamander_Streamline.html",
+						"cild": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 4,
+		"names": "Раздвижная система",
+		"alias": "doors-avtomatic.html",
+		"cild": []
+	},
+	{
+		"id": 4,
+		"names": "Клиентам",
+		"alias": "cliens.html",
+		"cild": []
+	},
+	{
+		"id": 4,
+		"names": "О фирме",
+		"alias": "company.html",
+		"cild": []
+	}
+]
