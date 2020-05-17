@@ -77,3 +77,10 @@ export function getArticles(f) {
             f({ data:response.data, status: response.status });
         })
 }
+
+export function getArticlesRow(f, alias) {
+    axois.get(initalBaseUrl + '/api/getdb/getartrow.php?alias=' + alias)
+        .then(function (response) {
+            f({ data:response.data[0], status: response.status });
+        })
+}

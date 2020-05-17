@@ -1,24 +1,28 @@
 [
 	{
 		"id": 1,
+		"parent": 0,
 		"names": "Главная",
 		"alias": "/",
 		"cild": []
 	},
 	{
 		"id": 2,
+		"parent": 0,
 		"names": "Окна",
 		"alias": "window.html",
 		"cild": [
 			{
 				"id": 1,
+				"parent": 2,
 				"names": "Система GreenEvolution",
 				"alias": "GreenEvolution.html",
 				"cild": [
 					{
 						"id": 1,
+						"parent": 2,
 						"names": "greenEvolution 76",
-						"alias": "greenEvolution_76.html",
+						"alias": "greenEvolution76.html",
 						"cild": []
 					}
 				]
@@ -31,19 +35,19 @@
 					{
 						"id": 1,
 						"names": "bluEvolution 82",
-						"alias": "bluEvolution_82.html",
+						"alias": "bluEvolution82.html",
 						"cild": []
 					},
 					{
 						"id": 2,
 						"names": "bluEvolution 73",
-						"alias": "bluEvolution_73.html",
+						"alias": "bluEvolution73.html",
 						"cild": []
 					},
 					{
 						"id": 3,
 						"names": "bluEvolution 92",
-						"alias": "bluEvolution_92.html",
+						"alias": "bluEvolution92.html",
 						"cild": []
 					}
 				]
@@ -51,18 +55,18 @@
 			{
 				"id": 3,
 				"names": "Другие окна",
-				"alias": "drugie_okna.html",
+				"alias": "drugieokna.html",
 				"cild": [
 					{
 						"id": 1,
 						"names": "Salamander Streamline",
-						"alias": "Salamander_Streamline.html",
+						"alias": "streamline.html",
 						"cild": []
 					},
 					{
 						"id": 2,
 						"names": "Salamander 3D",
-						"alias": "Salamander_3D.html",
+						"alias": "Salamander3D.html",
 						"cild": []
 					}
 				]
@@ -77,24 +81,24 @@
 			{
 				"id": 2,
 				"names": "Система bluEvolution",
-				"alias": "bluEvolution_doors.html",
+				"alias": "bluEvolutiondoors.html",
 				"cild": [
 					{
 						"id": 1,
 						"names": "bluEvolution 82",
-						"alias": "bluEvolution_82.html",
+						"alias": "bluEvolution82.html",
 						"cild": []
 					},
 					{
 						"id": 2,
 						"names": "bluEvolution 73",
-						"alias": "bluEvolution_73.html",
+						"alias": "bluEvolution73.html",
 						"cild": []
 					},
 					{
 						"id": 3,
 						"names": "bluEvolution 92",
-						"alias": "bluEvolution_92.html",
+						"alias": "bluEvolution92.html",
 						"cild": []
 					}
 				]
@@ -102,12 +106,12 @@
 			{
 				"id": 3,
 				"names": "Другие двери",
-				"alias": "drugie_ dveri.html",
+				"alias": "drugiedveri.html",
 				"cild": [
 					{
 						"id": 1,
 						"names": "Salamander Streamline",
-						"alias": "Salamander_Streamline.html",
+						"alias": "SalamanderStreamline.html",
 						"cild": []
 					}
 				]
@@ -117,17 +121,17 @@
 	{
 		"id": 4,
 		"names": "Раздвижная система",
-		"alias": "doors-avtomatic.html",
+		"alias": "doorsavtomatic.html",
 		"cild": []
 	},
 	{
-		"id": 4,
+		"id": 5,
 		"names": "Клиентам",
-		"alias": "cliens.html",
+		"alias": "clients.html",
 		"cild": []
 	},
 	{
-		"id": 4,
+		"id": 6,
 		"names": "О фирме",
 		"alias": "company.html",
 		"cild": []
