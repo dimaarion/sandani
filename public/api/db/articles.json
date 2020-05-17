@@ -13,8 +13,7 @@
                 "description": "Главная"
             }
         ],
-        "names": "home",
-        "contact": "ddddddddddddddd"
+        "names": "home"
     },
     {
         "id": 2,
@@ -33,17 +32,17 @@
             {
                 "id": 2,
                 "img": "grenBV.jpg",
-                "alias": "GreenEvolution",
+                "alias": "GreenEvolution.html",
                 "names": "Система GreenEvolution",
                 "title": "GreenEvolution",
-                "content": "Окна GreenEvolution",
+                "content": "greenEvolution — больше, чем система профилей. Эта совместимая и гибкая платформа предлагает множество вариантов для индивидуальных решений. Товары массового производства остались в прошлом: сегодня на смену пришла индивидуальность. Наша совместимая платформа предлагает на выбор шесть различных ассортиментных групп при сохранении полной гибкости. Будь то AD или MD, оба варианта изоляции можно встраивать в одну и ту же систему профилей. greenEvolution подкупает своими инновационными технологиями и оптимальными показателями изоляции. Однако впечатляют не только внутренние параметры: разнообразные возможности дизайна и выбора материала создают визуальные эффекты, и здесь не последнюю роль играют поверхности из натурального материала.",
                 "keyWord": "GreenEvolution",
                 "description": "GreenEvolution",
                 "GreenEvolution": [
                     {
                         "id": 1,
                         "img": "",
-                        "alias": "greenEvolution_76",
+                        "alias": "greenEvolution_76.html",
                         "names": "greenEvolution 76",
                         "title": "greenEvolution 76",
                         "content": "Окна greenEvolution 76",
@@ -55,7 +54,7 @@
             {
                 "id": 3,
                 "img": "salamander_bluevolution_92.jpg",
-                "alias": "bluEvolution",
+                "alias": "bluEvolution.html",
                 "names": "Система bluEvolution",
                 "title": "Система bluEvolution",
                 "content": "Окна bluEvolution",
@@ -65,7 +64,7 @@
                     {
                         "id": 1,
                         "img": "",
-                        "alias": "bluEvolution_82",
+                        "alias": "bluEvolution_82.html",
                         "names": "bluEvolution 82",
                         "title": "bluEvolution 82",
                         "content": "Окна bluEvolution 82",
@@ -75,7 +74,7 @@
                     {
                         "id": 2,
                         "img": "",
-                        "alias": "bluEvolution_73",
+                        "alias": "bluEvolution_73.html",
                         "names": "bluEvolution 73",
                         "title": "bluEvolution 73",
                         "content": "Окна bluEvolution 73",
@@ -85,7 +84,7 @@
                     {
                         "id": 3,
                         "img": "",
-                        "alias": "bluEvolution_92",
+                        "alias": "bluEvolution_92.html",
                         "names": "bluEvolution 92",
                         "title": "bluEvolution 92",
                         "content": "Окна bluEvolution 92",
@@ -97,7 +96,7 @@
             {
                 "id": 4,
                 "img": "news2.jpg",
-                "alias": "drugie_okna",
+                "alias": "drugie_okna.html",
                 "names": "Окна других производителей",
                 "title": "Другие окна",
                 "content": "Окна Другие окна",
@@ -107,7 +106,7 @@
                     {
                         "id": 1,
                         "img": "",
-                        "alias": "Salamander_Streamline",
+                        "alias": "Salamander_Streamline.html",
                         "names": "Salamander Streamline",
                         "title": "Salamander Streamline",
                         "content": "Salamander Streamline",

@@ -3,9 +3,15 @@ h2, h3{
 }
 h2 a{
     text-decoration: none;
-    color: rgb(35, 156, 35);
+    color: #009559;
+    text-shadow: 3px 3px 3px #009559;
 }
 
+h2:hover a{
+    text-decoration: none;
+    color: #009559;
+    
+}
 .imagearts img{
      border: solid 8px #909190;
     border-radius: 400px;
@@ -15,23 +21,35 @@ h2 a{
     cursor: pointer;
 }
 .imagearts img:hover{
-    border: solid 8px green;
+    border: solid 8px #009559;
     
 }
 .boot{
-    border: solid 1px green;
+    border: solid 1px #009559;
     font-size: 15pt;
-    
+    height: 38px;
 }
 .boot a{
-    color: green;
-    display: block;
+    color: #009559;
+    margin-top: 5px;
+    transition: 1s; 
+    z-index: 1000;
+    position: relative;
 }
-.boot a:hover{
+
+
+.boot:hover a{
     text-decoration: none;
+    color: #ffffff;
+   
+}
+.boot:hover .bootbg{
+    width: 100%;
 }
 .bootbg{
-    width: 10px;
-    background-color: green;
-    height: 30px;
+    width: 0px;
+    background-color: #009559;
+    height: 38px;
+    transition: 0.8s;
+    position: absolute;
 }
