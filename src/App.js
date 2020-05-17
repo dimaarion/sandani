@@ -27,7 +27,7 @@ function App() {
 
 let bac;
 let t = true;
-if(t == false){
+if(t === false){
 bac = {backgroundImage: 'url(/img/16_col.gif)'};
 }else{
   bac = {};

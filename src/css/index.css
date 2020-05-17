@@ -18,3 +18,20 @@ h2 a{
     border: solid 8px green;
     
 }
+.boot{
+    border: solid 1px green;
+    font-size: 15pt;
+    
+}
+.boot a{
+    color: green;
+    display: block;
+}
+.boot a:hover{
+    text-decoration: none;
+}
+.bootbg{
+    width: 10px;
+    background-color: green;
+    height: 30px;
+}

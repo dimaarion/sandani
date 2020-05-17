@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getArticles } from '../actions';
 import { NavLink } from "react-router-dom";
+import '../css/home.css';
 function Home() {
 
 	const [articles, setarticles] = useState({ data: [{}], status: 0 });
@@ -24,6 +25,7 @@ function Home() {
 								</div>
 								<div className="col">
 									<div className=" text-sm-left" style = {{fontSize:'16pt'}}>{x.content}</div>
+									<div className="boot col-5  "><div className="bootbg"><NavLink  to = {x.alias} >Подробнее...</NavLink></div></div>
 								</div>
 							</div>
 						</div> :
