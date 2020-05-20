@@ -15,7 +15,7 @@ function Menu(props) {
 							<NavLink
 								className="nav-link"
 								exact 
-								to={`${x.alias}`}
+								to={`${x.menu_alias}`}
 								activeStyle={{
 									borderBottom: "solid 2px green",
 								
@@ -24,10 +24,10 @@ function Menu(props) {
 									color: 'rgb(65, 77, 66)',
 									fontSize: '13pt'
 								}}
-								onMouseOver={() => props.setstate({ lin: true, podMenu: x.cild})}
+								onMouseOver={() => props.setstate({ lin: true, podMenu: array_obj(x.cild)})}
 								
 								>
-								{x.names}
+								{x.menu_name}
 								
 							</NavLink>
 							<div></div>

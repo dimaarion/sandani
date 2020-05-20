@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getArticlesRow } from '../actions';
+import { getArticlesRow, array_obj } from '../actions';
 import { Link } from "react-router-dom";
 import '../css/home.css';
-import Button from '../components/Button';
+import Subart from '../components/Subart';
+import Artbol from '../components/Artbol';
 
 function Article(props) {
 	const [articles, setarticles] = useState({ data: [{}], status: 0 });
@@ -15,23 +16,21 @@ function Article(props) {
 			{(articles.status === 200) ?
 				<div className="row ">
 					{articles.data.map((x, i) =>
-						(x.id === 1) ?
+						(i === 0) ?
 							<div key={i + 66} className="container-fluid">
-								<h2 className="text-center p-5 mt-5"><Link to={x.alias}>{x.names}</Link></h2>
-								<div className="row container-fluid">
-									<div className="col-sm">
-										<div className="text-center"><Link to={x.alias}><img style={{ borderRadius: '10px' }} width="100%" src={`/img/window/${x.img}`} alt={x.names} /></Link></div>
-									</div>
-									<div className="col">
-										<div className=" text-sm-left" style={{ fontSize: '16pt' }}>{x.content}</div>
-									</div>
+								<h2 className="text-center p-5 mt-5"><Link to={x.art_alias}>{x.art_name}</Link></h2>
+								<div className="container">
+									<div className="text-center"><Link to={x.art_alias}><img style={{ borderRadius: '10px' }} width="100%" src={`/img/window/${x.art_img}`} alt={x.art_name} /></Link></div>
 								</div>
-							</div> :
-							<div key={i + 5} className="col-sm pt-5">
-								<h3 className="h3 pb-2 text-center">{x.names}</h3>
-								<div className="text-center imagearts"><Link to={x.alias}><img src={`/img/window/${x.img}`} alt={x.names} /></Link></div>
-
+								<div className="container-fluid">
+									<div className=" text-sm-left" style={{ fontSize: '16pt' }}>{x.art_content}</div>
+								</div>
 							</div>
+							: <Artbol key={x.art_id + 2} art_name={x.art_name} art_alias={x.art_alias} art_img={x.art_img} art_subcontent={x.art_subcontent} />
+
+
+
+
 					)}
 				</div>
 				: ''}

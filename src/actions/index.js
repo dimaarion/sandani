@@ -24,9 +24,9 @@ export function menuPod(x, f = () => { }) {
 
                 {
                     array_obj(x.cild).map((y, i) =>
-                        <li className="nav-item" onMouseOver={() => f({ lin: true })} key={y.id}>
-                            <NavLink className="nav-link item_lin" onMouseOver={() => f({ lin: true })} to={`${y.alias}`} style={{ fontSize: '12pt' }} activeStyle={{ color: '#2ca612' }}>
-                                {y.names}
+                        <li className="nav-item" onMouseOver={() => f({ lin: true })} key={y.menu_id}>
+                            <NavLink className="nav-link item_lin" onMouseOver={() => f({ lin: true })} to={`${y.menu_alias}`} style={{ fontSize: '12pt' }} activeStyle={{ color: '#2ca612' }}>
+                                {y.menu_name}
                             </NavLink>{menuPod(y)}
                         </li>
                     )
@@ -81,6 +81,6 @@ export function getArticles(f) {
 export function getArticlesRow(f, alias) {
     axois.get(initalBaseUrl + '/api/getdb/getartrow.php?alias=' + alias)
         .then(function (response) {
-            f({ data:response.data[0], status: response.status });
+            f({ data:response.data, status: response.status });
         })
 }

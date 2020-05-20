@@ -12,12 +12,13 @@ import Article from './pages/Article';
 import Load from './components/Load';
 import Logo from './components/Logo';
 import { getMenu, getLogo, array_obj, menuPod, getPodMenu, connectPanel } from './actions'
+import Footer from './components/Footer';
 function App() {
   const [menu, setmenu] = useState({ data: [{}], status: 0 });
   const [logotype, setlogotype] = useState({ data: [{}], status: 0 });
   const [podmenu, setpodmenu] = useState({ data: [{}], status: 0 });
   const [connectpanel, setconnectpanel] = useState({ data: [{}], status: 0 });
-  const [state, setstate] = useState({ lin: false, podMenu: [] });
+  const [state, setstate] = useState({ lin: false, podMenu: [{}] });
   useEffect(() => {
     getMenu(setmenu);
     getLogo(setlogotype);
@@ -60,8 +61,8 @@ bac = {backgroundImage: 'url(/img/16_col.gif)'};
               array_obj(state.podMenu).map((x, i) =>
                 <div className="col-sm-3 p-4" key={i + 55}>
                   <div className="col-sm item_head">
-                    <NavLink activeStyle={{ textDecorationLine: 'revert' }} onMouseOver={() => setstate({ lin: true })} to={`${x.alias}`}>
-                      {x.names}
+                    <NavLink activeStyle={{ textDecorationLine: 'revert' }} onMouseOver={() => setstate({ lin: true })} to={`${x.menu_alias}`}>
+                      {x.menu_name}
                     </NavLink>
                   </div>
                   {(array_obj(x.cild).length !== 0) ? menuPod(x, setstate) : ''}
@@ -83,10 +84,10 @@ bac = {backgroundImage: 'url(/img/16_col.gif)'};
              <div className="col-sm " key = {x.id + 23}>
              <div className = "row">
                <div className = "col-sm-3">
-                 <img width = "70px" src={`/img/icon/${x.img}`} alt={x.names} />
+                     <img width="70px" src={`/img/icon/${x.img}`} alt={x.names} />
                </div>
                <div className = "col-sm-8" style = {{fontSize:'18pt'}}>
-                 {x.names}
+                     {x.names}
                </div>
              </div>
                 
@@ -102,14 +103,14 @@ bac = {backgroundImage: 'url(/img/16_col.gif)'};
       <div className = "col-sm">
       
          {
-        (menu.status === 200 && podmenu.status === 200) ?
+        (podmenu.status === 200) ?
 
           <Switch>
             <Route exact path="/" component={Home} />
 
             {
-              podmenu.data.map((x, i) =>
-                <Route key={i + 22} path={`/${x}`} component={Article} />
+                  podmenu.data.map((x, i) =>
+                <Route key={i + 22} path={`/${x.menu_alias}`} component={Article} />
               )
             }
             <Route
@@ -120,8 +121,8 @@ bac = {backgroundImage: 'url(/img/16_col.gif)'};
       </div>
       <div className="col col-lg-1"></div>
       </div>
-     
     </div>
+    
   );
 }
 

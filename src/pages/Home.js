@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { getArticles } from '../actions';
+import { getArticles, array_obj, getArticlesRow } from '../actions';
 import { Link } from "react-router-dom";
 import '../css/home.css';
-import Button from '../components/Button';
+import Subart from '../components/Subart';
+import Artbol from '../components/Artbol';
 function Home() {
 
 	const [articles, setarticles] = useState({ data: [{}], status: 0 });
 
 	useEffect(() => {
-		getArticles(setarticles);
+		getArticlesRow(setarticles, '/');
 
 	}, []);
+
+
 	return (
 
 		<div className="col-sm">
@@ -20,25 +23,19 @@ function Home() {
 
 
 					<div className="row ">
-						{articles.data.map((x, i) =>
-							(x.id === 1) ?
-								<div key={i + 66} className="container-fluid">
-									<h2 className="text-center p-5 mt-5"><Link to={x.alias}>{x.names}</Link></h2>
-									<div className="row container-fluid">
-										<div className="col-sm">
-											<div className="text-center"><Link to={x.alias}><img style={{ borderRadius: '10px' }} width="100%" src={`/img/window/${x.img}`} alt={x.names} /></Link></div>
-										</div>
-										<div className="col">
-											<div className=" text-sm-left" style={{ fontSize: '16pt' }}>{x.content}</div>
-											<Button alias={x.alias} />
-										</div>
-									</div>
-								</div> :
-								<div key={i + 5} className="col-sm pt-5">
-									<h3 className="h3 pb-2 text-center">{x.names}</h3>
-									<div className="text-center imagearts"><Link to={x.alias}><img src={`/img/window/${x.img}`} alt={x.names} /></Link></div>
+						{array_obj(articles.data).map((x, i) =>
 
-								</div>
+(x.params === '1')?
+								<Subart key={x.art_id + 2} art_name={x.art_name} art_alias={x.art_alias} art_img={x.art_img} art_subcontent={x.art_subcontent}/>
+:
+								
+								<Artbol key={x.art_id + 4} art_name={x.art_name} art_alias={x.art_alias} art_img={x.art_img} art_subcontent={x.art_subcontent}/>
+							
+							
+
+
+
+
 						)}
 					</div>
 				</div>
