@@ -72,7 +72,7 @@ export function connectPanel(f) {
         })
 }
 export function getArticles(f) {
-    axois.get(initalBaseUrl + '/api/getdb/articles.php')
+    axois.get(initalBaseUrl + '/api/getdb/getmenupublic.php')
         .then(function (response) {
             f({ data:response.data, status: response.status });
         })
