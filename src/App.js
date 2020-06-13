@@ -11,31 +11,40 @@ import Home from './pages/Home';
 import Article from './pages/Article';
 import Load from './components/Load';
 import Logo from './components/Logo';
-import { getMenu, getLogo, array_obj, menuPod, getPodMenu, connectPanel } from './actions'
+import { getMenu, getLogo, array_obj, menuPod, getPodMenu, connectPanel, getArticles } from './actions'
 import Footer from './components/Footer';
 function App() {
   const [menu, setmenu] = useState({ data: [{}], status: 0 });
   const [logotype, setlogotype] = useState({ data: [{}], status: 0 });
+  const [articles, setarticles] = useState({ data: [{}], status: 0 });
   const [podmenu, setpodmenu] = useState({ data: [{}], status: 0 });
   const [connectpanel, setconnectpanel] = useState({ data: [{}], status: 0 });
   const [state, setstate] = useState({ lin: false, podMenu: [{}] });
+  const [footer, setfooter] = useState(0);
   useEffect(() => {
     getMenu(setmenu);
     getLogo(setlogotype);
     getPodMenu(setpodmenu);
     connectPanel(setconnectpanel);
+    getArticles(setarticles);
   }, []);
+document.onscroll = ()=>{
+ 
+    setfooter(window.scrollY + '/' + window.innerHeight);
 
-let bac;
-let t = true;
-if(t === false){
-bac = {backgroundImage: 'url(/img/16_col.gif)'};
-}else{
-  bac = {};
+   
 }
+  let bac;
+  let t = true;
+  if (t === false) {
+    bac = { backgroundImage: 'url(/img/16_col.gif)' };
+  } else {
+    bac = {};
+  }
 
   return (
-    <div className="App container-fluid" style={bac}>
+    <div className="App container-fluid p-0" style={bac}>
+    
       <div className="row justify-content-md-center">
         <div className="col col-lg-1"></div>
         <div className="col-sm-2">
@@ -78,51 +87,57 @@ bac = {backgroundImage: 'url(/img/16_col.gif)'};
       }
       <div className="container">
         <div className="row p-4">
-         
-           
-             {(connectpanel.status === 200)?connectpanel.data.map((x)=> 
-             <div className="col-sm " key = {x.id + 23}>
-             <div className = "row">
-               <div className = "col-sm-3">
-                     <img width="70px" src={`/img/icon/${x.img}`} alt={x.names} />
-               </div>
-               <div className = "col-sm-8" style = {{fontSize:'18pt'}}>
-                     {x.names}
-               </div>
-             </div>
-                
+          {(connectpanel.status === 200) ? connectpanel.data.map((x) =>
+            <div className="col-sm " key={x.id + 23}>
+              <div className="row">
+                <div className="col-sm-3">
+                  <img width="70px" src={`/img/icon/${x.img}`} alt={x.names} />
+                </div>
+                <div className="col-sm-8" style={{ fontSize: '18pt' }}>
+                  {x.names}
+                </div>
+              </div>
+
             </div>
-             ):''}
-            
-         
+          ) : ''}
+
+
         </div>
 
       </div>
-      <div className = "row justify-content-md-center">
-      <div className="col col-lg-1"></div>
-      <div className = "col-sm">
-      
-         {
-        (podmenu.status === 200) ?
+      <div className="row justify-content-md-center">
+        <div className="col col-lg-1"></div>
+        <div className="col-sm">
 
-          <Switch>
-            <Route exact path="/" component={Home} />
+          {
+            (menu.status === 200) ?
 
-            {
+              <Switch>
+                <Route exact path="/" component={Home} />
+
+                {
                   podmenu.data.map((x, i) =>
-                <Route key={i + 22} path={`/${x.menu_alias}`} component={Article} />
-              )
-            }
-            <Route
-              component={Err} />
-          </Switch>
-          : <Load />
-      }
+                    <Route key={i + 22} path={`/${x.menu_alias}`} component={Article} />
+                  )
+                }
+                {
+                  articles.data.map((x, i) =>
+                    <Route key={i + 22} path={`/${x.art_alias}`} component={Article} />
+                  )
+                }
+                <Route
+                  component={Err} />
+              </Switch>
+              : <Load />
+          }
+        </div>
+        <div className="col col-lg-1"></div>
       </div>
-      <div className="col col-lg-1"></div>
-      </div>
+      {(footer > '100') ?
+        <Footer />
+        : ''}
     </div>
-    
+
   );
 }
 

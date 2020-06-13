@@ -71,10 +71,19 @@ export function connectPanel(f) {
             f({ data: response.data, status: response.status });
         })
 }
+
+
 export function getArticles(f) {
-    axois.get(initalBaseUrl + '/api/getdb/getmenupublic.php')
+    axois.get(initalBaseUrl + '/api/getdb/articles.php')
         .then(function (response) {
-            f({ data:response.data, status: response.status });
+            f({ data: response.data, status: response.status });
+        })
+}
+
+export function getArticlesAlias(f, alias) {
+    axois.get(initalBaseUrl + '/api/getdb/articlesalias.php?art_alias=' + alias)
+        .then(function (response) {
+            f({ data: response.data, status: response.status });
         })
 }
 
