@@ -3,7 +3,8 @@ import './css/App.css';
 import {
   Switch,
   Route,
-  NavLink
+  NavLink,
+  Link
 } from "react-router-dom";
 import Menu from './components/Menu';
 import Err from './pages/Err';
@@ -13,6 +14,7 @@ import Load from './components/Load';
 import Logo from './components/Logo';
 import { getMenu, getLogo, array_obj, menuPod, getPodMenu, connectPanel, getArticles } from './actions'
 import Footer from './components/Footer';
+import Message from './pages/Message';
 function App() {
   const [menu, setmenu] = useState({ data: [{}], status: 0 });
   const [logotype, setlogotype] = useState({ data: [{}], status: 0 });
@@ -91,10 +93,10 @@ document.onscroll = ()=>{
             <div className="col-sm " key={x.id + 23}>
               <div className="row">
                 <div className="col-sm-3">
-                  <img width="70px" src={`/img/icon/${x.img}`} alt={x.names} />
+                <Link to = {x.alias}><img width="70px" src={`/img/icon/${x.img}`} alt={x.names} /></Link>  
                 </div>
                 <div className="col-sm-8" style={{ fontSize: '18pt' }}>
-                  {x.names}
+                  <Link to={x.alias}>{x.names}</Link>
                 </div>
               </div>
 
@@ -114,7 +116,7 @@ document.onscroll = ()=>{
 
               <Switch>
                 <Route exact path="/" component={Home} />
-
+                <Route path="/message.html" component={Message} />
                 {
                   podmenu.data.map((x, i) =>
                     <Route key={i + 22} path={`/${x.menu_alias}`} component={Article} />

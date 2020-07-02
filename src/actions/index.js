@@ -45,6 +45,7 @@ export function menuUpdate() {
     });
 }
 
+
 export function getMenu(f) {
     axois.get(initalBaseUrl + '/api/getdb/menupublic.php')
         .then(function (response) {
@@ -91,5 +92,12 @@ export function getArticlesRow(f, alias) {
     axois.get(initalBaseUrl + '/api/getdb/getartrow.php?alias=' + alias)
         .then(function (response) {
             f({ data:response.data, status: response.status });
+        })
+}
+
+export function geIp(f) {
+    axois.get(`${initalBaseUrl}/api/getdb/message.php`)
+        .then(function (response) {
+            f({ data: response.data, status: response.status });
         })
 }
