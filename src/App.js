@@ -15,6 +15,8 @@ import Logo from './components/Logo';
 import { getMenu, getLogo, array_obj, menuPod, getPodMenu, connectPanel, getArticles } from './actions'
 import Footer from './components/Footer';
 import Message from './pages/Message';
+import Calculator from './Calculator';
+
 function App() {
   const [menu, setmenu] = useState({ data: [{}], status: 0 });
   const [logotype, setlogotype] = useState({ data: [{}], status: 0 });
@@ -117,6 +119,7 @@ document.onscroll = ()=>{
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/message.html" component={Message} />
+                <Route path="/calculator.html" component={Calculator} />
                 {
                   podmenu.data.map((x, i) =>
                     <Route key={i + 22} path={`/${x.menu_alias}`} component={Article} />

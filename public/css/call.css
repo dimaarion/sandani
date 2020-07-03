@@ -1,0 +1,92 @@
+.table-left-top-call{
+    width: 100%;
+    position: absolute;
+    z-index: 8000;
+}
+
+.table-left-top-call tr td img{
+    width: 200px;
+    
+}
+.td-top-1{
+    height: 40px;
+}
+.td-top-5{
+   width: 50px;
+}
+.bt{
+    
+    height: 25px;
+    text-align: center;
+}
+
+.num-top, .num-left{
+    width: 45px;
+    height: 100%;
+    border: solid 1px #cccccc;
+    margin: auto;
+    right: 0px;
+    border-radius: 2px;
+}
+.num-left{
+    transform: rotate(-90deg);
+}
+.num-top{
+    height: 25px;
+}
+.num-right{
+    height: 150px;
+    width: 290px;
+    margin-left: -130px;
+    transform: rotate(-90deg);
+}
+.in{
+    width: 100%;
+    height: 25px;
+    border: solid 1px #cccccc;
+    border-radius: 2px;
+    text-align: center;
+}
+.table-right tr td{
+    width: 50px
+}
+.table-right td img{
+    height: 50px;
+}
+#img-tr{
+    padding-left: 5px;
+}
+.win{
+    margin-top: 300px;
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: green;
+    padding-top: 50px;
+}
+.win span{
+    color: black;
+    font-weight: initial;
+}
+.rezultCall{
+    background-color: green;
+    height: 100px;
+    
+}
+.test{
+    padding-top: 20px;
+    color: #ffffff;
+    font-size: 30pt;
+}
+.col-right-call{
+    margin-left: 100px;
+    z-index: 9000;
+}
+@media screen and (max-width: 1000px){
+.col-right-call{
+    margin-left: 10px;
+    z-index: 9000;
+    margin-top:600px;
+}
+  
+}
