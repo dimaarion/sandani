@@ -12,7 +12,9 @@ function Article(props) {
 		getArticlesRow(setarticles, props.match.url);
 		getArticlesAlias(setarticlesalias, props.match.url);
 	}, [props.match.url]);
-
+	function createMarkup(el) {
+		return { __html: el};
+	}
 	return (
 		<div className="container-fluid">
 			{(articles.data.length !== 0) ?
@@ -28,7 +30,7 @@ function Article(props) {
 											<div className="text-center"><Link to={x.art_alias}><img style={{ borderRadius: '10px' }} width="100%" src={`/img/window/${x.art_img}`} alt={x.art_name} /></Link></div>
 										</div>
 										<div className="container-fluid">
-											<div className=" text-sm-left" style={{ fontSize: '16pt' }}>{x.art_content}</div>
+											<div className=" text-sm-left" style={{ fontSize: '16pt' }} dangerouslySetInnerHTML={createMarkup(articlesalias.data.art_content)}></div>
 										</div>
 									</div>
 									: <Artbol key={x.art_id + 2} art_name={x.art_name} art_alias={x.art_alias} art_img={x.art_img} art_subcontent={x.art_subcontent} />
@@ -42,7 +44,7 @@ function Article(props) {
 						<div className="text-center"><img style={{ borderRadius: '10px' }} width="100%" src={`/img/window/${articlesalias.data.art_img}`} alt={articlesalias.data.art_name} /></div>
 					</div>
 					<div className="container-fluid">
-						<div className=" text-sm-left" style={{ fontSize: '16pt' }}>{articlesalias.data.art_content}</div>
+						<div className=" text-sm-left" style={{ fontSize: '16pt' }} dangerouslySetInnerHTML={createMarkup(articlesalias.data.art_content)}></div>
 					</div>
 				</div>}
 				
