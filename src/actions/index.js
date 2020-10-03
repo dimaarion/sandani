@@ -3,7 +3,7 @@ import axois from 'axios';
 import { NavLink } from "react-router-dom";
 
 
-const initalBaseUrl = 'http://sandani.local';
+const initalBaseUrl = 'https://sandani.ru';
 
 export const array_obj = (arr) => {
     let new_arr = [];

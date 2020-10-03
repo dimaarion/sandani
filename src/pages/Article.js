@@ -26,9 +26,9 @@ function Article(props) {
 								(i === 0) ?
 									<div key={i + 66} className="container-fluid">
 										<h2 className="text-center p-5 mt-5"><Link to={x.art_alias}>{x.art_name}</Link></h2>
-										<div className="container">
+										{(props.art_img) ?<div className="container">
 											<div className="text-center"><Link to={x.art_alias}><img style={{ borderRadius: '10px' }} width="100%" src={`/img/window/${x.art_img}`} alt={x.art_name} /></Link></div>
-										</div>
+										</div>:''}
 										<div className="container-fluid">
 											<div className=" text-sm-left" style={{ fontSize: '16pt' }} dangerouslySetInnerHTML={createMarkup(articlesalias.data.art_content)}></div>
 										</div>
@@ -39,11 +39,8 @@ function Article(props) {
 						: ''}
 				</div>
 				: <div  className="container-fluid">
-					<h2 className="text-center p-5 mt-5">{articlesalias.data.art_name}</h2>
-					<div className="container">
-						<div className="text-center"><img style={{ borderRadius: '10px' }} width="100%" src={`/img/window/${articlesalias.data.art_img}`} alt={articlesalias.data.art_name} /></div>
-					</div>
-					<div className="container-fluid">
+					<h1 className="text-center p-5 mt-5 ">{articlesalias.data.art_name}</h1>
+					<div className="container-fluid mt-5">
 						<div className=" text-sm-left" style={{ fontSize: '16pt' }} dangerouslySetInnerHTML={createMarkup(articlesalias.data.art_content)}></div>
 					</div>
 				</div>}

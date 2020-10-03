@@ -1,15 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { getArticles, array_obj, geIp } from '../actions';
-import { Link } from "react-router-dom";
+import { geIp } from '../actions';
 import '../css/home.css';
-import Subart from '../components/Subart';
-import Artbol from '../components/Artbol';
+
 function Message() {
     const [ip, setip] = useState({ data: [{}], status: 0 });
+    const [username, setusername] = useState('');
+    const [usertel, setusertel] = useState('');
+    const [usermail, setusermail] = useState('');
+
+    function preg_replace_tel(u) {
+        let txt = u.concat();
+        let arr = [];
+        txt.split('')
+        .map((x, i)=> arr[i] = (i == 1)?'(':x)
+        .map((x, i) => arr[i] = (i == 5) ? ')' : x)
+        .map((x, i) => arr[i] = (i == 6) ? ' ' : x)
+        .map((x, i) => arr[i] = (i == 10) ? ' ' : x)
+        .map((x, i) => arr[i] = (i == 12) ? '-' : x)
+        .map((x, i) => arr[i] = (i == 15) ? '-' : x)
+        .map((x, i) => arr[i] = (i > 16) ? '' : x);
+        return arr.join('').replace(/[a-z_A-Z_а-я_А-Я]/g,''); 
+    }
     useEffect(() => {
         geIp(setip);
-
     }, []);
+    useEffect(() => {
+        setusertel(preg_replace_tel(usertel));
+    }, [usertel]);
     return (
         <div className="container">
             <h2>Напишите нам сообщение</h2>
@@ -21,16 +38,16 @@ function Message() {
                     <form className="needs-validation" action="/api/getdb/message.php" method="post" id="form_message">
                         <div className="form">
                             <div className="col-md mb-3">
-                                <label htmlFor="username">Ф. И. О. <span id="namespan" /></label>
-                                <input name="username" type="text" className="form-control" id="username" placeholder="Ф. И. О." />
+                                <label htmlFor="username">Ф. И. О. <span id="namespan" />{username}</label>
+                                <input onChange={(e) => setusername(e.target.value)} name="username" type="text" className="form-control" id="username" placeholder="Ф. И. О." />
                             </div>
                             <div className="col-md mb-3">
-                                <label htmlFor="usertel">Номер телефона <span id="telspan" /></label>
+                                <label htmlFor="usertel">Номер телефона <span id="telspan" />{usertel}</label>
                                 <div className="input-group">
                                     <div className="input-group-prepend">
                                         <span className="input-group-text" id="inputGroupPrepend">☎</span>
                                     </div>
-                                    <input name="usertel" type="text" className="form-control" id="usertel" placeholder="0 (373) 777 7-77-77" aria-describedby="inputGroupPrepend" />
+                                    <input value={usertel} onChange={(e) => setusertel(e.target.value)} name="usertel" type="text" className="form-control" id="usertel" placeholder="0 (373) 777 7-77-77" aria-describedby="inputGroupPrepend" />
                                 </div>
                             </div>
                             <div className="col-md mb-3">
@@ -60,7 +77,7 @@ function Message() {
                 <div className="col-sm-3" />
             </div>
         </div>
-        
+
     )
 }
 

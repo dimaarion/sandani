@@ -1,3 +1,32 @@
-# https://www.robotstxt.org/robotstxt.html
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /bootstrap/
+Disallow: /static/
+Disallow: /image/
+Disallow: /fonts/
+Disallow: /message/
+Disallow: /img/
+Disallow: /js/
+Disallow: /index.php?
+Disallow: /call.php
+Disallow: /calculator.php
+
+
+
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /bootstrap/
+Disallow: /static/
+Disallow: /image/
+Disallow: /fonts/
+Disallow: /message/
+Disallow: /img/
+Disallow: /js/
+Disallow: /index.php?
+Disallow: /call.php
+Disallow: /calculator.php
+Host: https://sandani.ru
