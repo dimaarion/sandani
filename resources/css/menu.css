@@ -1,0 +1,84 @@
+#menu ul li div {
+    border-bottom: solid 2px #ffffff;
+    width: 0px;
+    margin-top: 0px;
+
+}
+
+#menu ul li a {
+    color: #333333;
+    display: block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-variant: petite-caps;
+
+}
+
+#menu ul li a:hover {
+    color: #009559;
+    display: block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-variant: petite-caps;
+
+}
+
+#menu ul li:hover div {
+    border-bottom: solid 1px green;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+#menu ul li {
+    position: relative;
+    padding-left: 15px;
+}
+
+#menu ul li ul {
+    position: absolute;
+    padding: 0;
+    width: 350px;
+    background-color: #ffffff;
+    display: none;
+    z-index: 8000;
+}
+
+#menu ul li:hover ul {
+    display: block;
+}
+
+#menu .active > a{
+    color: #009559 !important;
+}
+
+#menu .active div{
+    border-bottom: 1px solid green;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+#tabs .nav-item a:hover {
+    background-color: #fff !important;
+}
+
+footer .nav-item a:hover {
+    color: #8aa88a !important;
+}
+
+footer .nav-item .active {
+    color: #8aa88a !important;
+}
+
+#menu-mob ul li a {
+    font-weight: bold;
+}
+
+#menu-mob ul li>ul {
+    margin-left: -30px;
+}
+
+#menu-mob ul li>ul li a {
+    font-weight: 300;
+    color: #333333;
+}

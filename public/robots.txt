@@ -1,0 +1,22 @@
+User-agent: Yandex
+Allow: /
+Disallow: /css/
+Disallow: /js/
+Disallow: /slider/
+Disallow: /storage/
+Disallow: /public/*
+Disallow: /.json$
+Disallow: /cache/*
+
+
+User-agent: *
+Allow: /
+Sitemap: https://sandani.ru/sitemap/sitemap.xml
+Disallow: /css/
+Disallow: /js/
+Disallow: /slider/
+Disallow: /storage/
+Disallow: /public/*
+Disallow: /.json$
+Disallow: /cache/*
+Host:https://sandani.ru/

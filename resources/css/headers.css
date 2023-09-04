@@ -1,0 +1,6 @@
+.lineHead{
+  height: 1px; 
+  width: 100%; 
+  background-color: rgb(204, 204, 204); 
+  margin-top: -16px;
+}
